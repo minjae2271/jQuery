@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="tutorial">
+        <li class="tutorial" id="HTML">HTML</li>
+        <li class="tutorial" id="CSS">CSS</li>
+        <li class="tutorial">JS</li>
+        <li class="tutorial">JQUERY</li>
+        <li class="tutorial">PYTHON</li>
+    </ul>
+    <button id="id">#HTML</button>
+    <button id="class">.tutorial</button>
+    <button id="ele">li</button>
+    <button id="multi">#HTML,#CSS</button>
+
+    <ul id="list">
+        <li>PHP</li>
+        <li>C++</li>
+        <li>JAVA</li>
+        <li>GOLANG</li>
+        <li>C</li>
+    </ul>
+    <button id="eq">#list li:eq(1)</button>
+    <button id="gt">#list li:gt(1)</button>
+    <button id="lt">#list li:lt(3)</button>
+    <button id="even">$list li:even</button>
+    <button id="odd">#list li:odd</button>
+    <button id="first">#list li:first</button>
+    <button id="last">$list li:last</button>
+
+    <ul id="attr">
+        <li target="ABCD">ABCD</li>
+        <li target="BCDE">BCDE</li>
+        <li target="CDEF">CDEF</li>
+        <li target="DEFG">DEFG</li>
+        <li target="EFGH">EFGH</li>
+        <li id="FGHI" target="FGHI">FGHI</li>
+    </ul>
+    <button id="all">[target*="BC"]</button>
+    <button id="equal">[target="DEFG"]</button>
+    <button id="not">[target!="DEFG"]</button>
+    <button id="start">[target^="B"]</button>
+    <button id="end">[target$="H"]</button>
+    <button id="target">[target]</button>
+    <button id=attMulti>[target][id]</button>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">  
+        (function($){
+            //1.selector
+            $("#id").click(function(){
+                $("#HTML").css('background-color', 'red'); 
+            });
+            $("#class").click(function(){
+                $(".tutorial").css('background-color', 'red'); 
+            });
+            $("#ele").click(function(){
+                $("li").css('background-color', 'red'); 
+            });
+            $("#multi").click(function(){
+                $("#HTML,#CSS").css('background-color', 'red'); 
+            });
+            //2.filter
+            $("#eq").click(function(){
+                $("#list li:eq(1)").css('background-color', 'red'); 
+            });
+            $("#gt").click(function(){
+                $("#list li:gt(1)").css('background-color', 'red'); 
+            });
+            $("#lt").click(function(){
+                $("#list li:lt(3)").css('background-color', 'red'); 
+            });
+            $("#even").click(function(){
+                $("#list li:even").css('background-color', 'red'); 
+            });
+            $("#odd").click(function(){
+                $("#list li:odd").css('background-color', 'red'); 
+            });
+            $("#first").click(function(){
+                $("#list li:first").css('background-color', 'red'); 
+            });
+            $("#last").click(function(){
+                $("#list li:last").css('background-color', 'red'); 
+            });
+            //3.attribute
+            $("#all").click(function(){
+                $('[target*="BC"]').css('background-color', 'red'); 
+            });
+            $("#equal").click(function(){
+                $('[target="DEFG"]').css('background-color', 'red'); 
+            });
+            $("#not").click(function(){
+                $('[target!="DEFG"]').css('background-color', 'red'); 
+            });
+            $("#start").click(function(){
+                $('[target^="B"]').css('background-color', 'red'); 
+            });
+            $("#end").click(function(){
+                $('[target$="H"]').css('background-color', 'red'); 
+            });
+            $("#target").click(function(){
+                $('[target]').css('background-color', 'red'); 
+            });
+            $("#attMulti").click(function(){
+                $('[target][id]').css('background-color', 'red'); 
+            });
+        })(jQuery);
+    </script>
+</body>
+</html>
